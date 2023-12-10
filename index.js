@@ -88,9 +88,23 @@ var finances = [
 ];
 
 
-
-// Add all totals together 
-
 // total number of months - add 'Total months:'
-console.log('Total Months: ' + (finances.length));
+// console.log('Total Months: ' + (finances.length));
 
+// variables for each part
+let totalMonths = finances.length;
+let totalProfitLoss = 0;
+let totalChange = 0;
+// let greatestIncrease = 
+// let greatestDecrease =
+
+
+
+
+//Console logs for all variables
+
+console.log('Total Months: ', totalMonths);
+console.log('Total Profit/Loss: ', totalProfitLoss);
+console.log('Average change: ');
+console.log('Greatest increase: ');
+console.log('Greatest decrease: ');
