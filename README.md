@@ -11,4 +11,6 @@ Greatest decrease in Profit/Loss (with the corresponding month and amount)
 
 You can view the calculated financial metrics in the console. 
 
+<img width="1220" alt="Screenshot 2023-12-11 at 20 46 40" src="https://github.com/georgielill/Console-Finances/assets/47761199/b23c90ba-3329-4543-9595-266690a6f86b">
+
 
