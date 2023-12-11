@@ -88,23 +88,74 @@ var finances = [
 ];
 
 
-// total number of months - add 'Total months:'
-// console.log('Total Months: ' + (finances.length));
-
 // variables for each part
 let totalMonths = finances.length;
-let totalProfitLoss = 0;
-let totalChange = 0;
+
 // let greatestIncrease = 
 // let greatestDecrease =
 
+// Profit loss total
 
+let totalProfitLoss = 0;
+let totalChange = 0;
+let change = 0;
+
+for (let i = 0; i < totalMonths; i++) {
+  const [date, profitLoss] = finances[i];
+
+  totalProfitLoss += profitLoss;
+
+  // Change month on month added together
+  if (i > 0) {
+    const change = profitLoss - finances[i - 1][1];
+    totalChange = totalChange - change;
+  }
+}
+
+// Average change month on month 
+const averageChange = totalChange / (totalMonths - 1);
+
+// console.log(averageChange);
+// console.log(totalChange);
+//Formating to two decimal places
+const formatAverageChange = averageChange.toFixed(2);
+
+//Greatest increase in profitLoss
+
+let maxChange = 0;
+let monthMaxChange = ``;
+
+for (let i = 1; i < totalMonths; i++) {
+  let change = finances[i][1] - finances[i - 1][1];
+
+  if (change > maxChange) {
+    maxChange = change;
+    monthMaxChange = finances[i][0];
+  }
+}
+
+//Greatest decrease in profitLoss
+
+let minChange = 0;
+let monthMinChange;
+
+for (let i = 1; i < totalMonths; i++) {
+  let change = finances[i][1] - finances[i - 1][1];
+
+  if (change < minChange) {
+    minChange = change;
+    monthMinChange = finances[i][0];
+  }
+}
 
 
 //Console logs for all variables
-
-console.log('Total Months: ', totalMonths);
-console.log('Total Profit/Loss: ', totalProfitLoss);
-console.log('Average change: ');
-console.log('Greatest increase: ');
-console.log('Greatest decrease: ');
+console.log(`Financial Analysis`)
+console.log(`-------------------`)
+console.log(`Total Months: ${totalMonths}`);
+console.log(`Total Profit / Loss: $${totalProfitLoss}`);
+console.log(`Average change: -${formatAverageChange}`);
+console.log(`Greatest increase: ${monthMaxChange} ($${maxChange})`);
+console.log(`Greatest decrease: ${monthMinChange} ($${minChange})`);
+// console.log(change);
+// console.log(totalChange);
