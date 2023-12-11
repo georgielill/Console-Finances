@@ -3,11 +3,11 @@ This JavaScript project analyses a dataset containing financial records, specifi
 
 The script calculates and displays the following financial metrics:
 
-Total number of months in the dataset
-Total Profit/Loss over the entire period
-Average change in Profit/Loss month-to-month
-Greatest increase in Profit/Loss (with the corresponding month and amount)
-Greatest decrease in Profit/Loss (with the corresponding month and amount)
+<li>Total number of months in the dataset</li>
+<li>Total Profit/Loss over the entire period</li>
+<li>Average change in Profit/Loss month-to-month</li>
+<li>Greatest increase in Profit/Loss (with the corresponding month and amount)</li>
+<li>Greatest decrease in Profit/Loss (with the corresponding month and amount)</li>
 
 You can view the calculated financial metrics in the console. 
 
