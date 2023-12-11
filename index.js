@@ -88,13 +88,11 @@ var finances = [
 ];
 
 
-// variables for each part
+// Total months
 let totalMonths = finances.length;
 
-// let greatestIncrease = 
-// let greatestDecrease =
 
-// Profit loss total
+// Total profit loss
 
 let totalProfitLoss = 0;
 let totalChange = 0;
@@ -115,8 +113,7 @@ for (let i = 0; i < totalMonths; i++) {
 // Average change month on month 
 const averageChange = totalChange / (totalMonths - 1);
 
-// console.log(averageChange);
-// console.log(totalChange);
+
 //Formating to two decimal places
 const formatAverageChange = averageChange.toFixed(2);
 
@@ -157,5 +154,3 @@ console.log(`Total Profit / Loss: $${totalProfitLoss}`);
 console.log(`Average change: -${formatAverageChange}`);
 console.log(`Greatest increase: ${monthMaxChange} ($${maxChange})`);
 console.log(`Greatest decrease: ${monthMinChange} ($${minChange})`);
-// console.log(change);
-// console.log(totalChange);
